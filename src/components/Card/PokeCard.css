@@ -1,0 +1,143 @@
+@import '../../variables/colores.css';
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.card_title{
+    text-align: center;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card_title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokeball{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    animation: MoveUpDown 2s linear infinite;
+    
+}
+
+.picture{
+    background: var(--screen);
+    border: 8px solid var(--border);
+    border-radius: .6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 95%;
+}
+
+.pokemon{
+    padding: 2rem;
+    
+}
+
+.pokemon_img{
+    
+    width: 15rem;
+}
+
+.image-background{
+    background: var(--border);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+.stats{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1.8rem;
+}
+
+.stats h2 {
+    font-size: 1.8rem;
+}
+
+.stats h3{
+    font-size: 2rem;
+}
+
+.stats p {
+    font-size: 1.3rem;
+}
+
+.pokeball__btn{
+    animation: fadeInUp 1s linear;
+    cursor: pointer;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem);
+    }
+}
+   
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+    
+@media (min-width: 990px) {
+    .card{
+        width: 95%;
+    }
+
+    .card_title{
+        width: 100%;
+        font-size: 3rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    .picture {
+        flex-direction: row;
+        max-width: 100rem;
+        width: 55%;
+        height: 30rem;
+    }
+
+    .pokemon{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
